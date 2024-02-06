@@ -5,7 +5,10 @@ const List = ({ text }) => {
     <div>
       <ul>
         {text.map((i) => (
-          <li key={uuidv4()}>{i}</li>
+          <li key={uuidv4()}>
+            {i}
+            <button className="del-btn">Done</button>
+          </li>
         ))}
       </ul>
     </div>
