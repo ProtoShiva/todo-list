@@ -7,6 +7,7 @@ const List = ({ text, onDelete }) => {
         {text.map((i, index) => (
           <li key={uuidv4()}>
             {i}
+            <input className="list-date" type="date" />
             <button
               className="del-btn"
               onClick={() => {

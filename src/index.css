@@ -18,7 +18,7 @@ body {
 
 .container {
   height: auto;
-  width: 35%;
+  width: 40%;
   min-height: 500px;
   max-width: 500px;
   min-width: 250px;
@@ -81,6 +81,7 @@ li {
   position: relative;
   padding: 0.5rem;
   list-style-position: inside;
+  font-weight: bold;
 }
 
 #root {
@@ -98,5 +99,19 @@ li {
   font-size: 1rem;
   margin-left: 20px;
   color: white;
+  cursor: pointer;
   /* background-color: red; */
+}
+
+.list-date{
+  margin-left: 10px;
+  border: none;
+  /* background-image: radial-gradient(#bfc0c1 7.2%, transparent 0); */
+  background-color: #ffeaa7;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  cursor: pointer;
+  height: 35px;
+  font-family: "Architects Daughter", cursive;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
