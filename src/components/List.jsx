@@ -1,13 +1,20 @@
 import React from "react"
 import { v4 as uuidv4 } from "uuid"
-const List = ({ text }) => {
+const List = ({ text, onDelete }) => {
   return (
     <div>
       <ul>
-        {text.map((i) => (
+        {text.map((i, index) => (
           <li key={uuidv4()}>
             {i}
-            <button className="del-btn">Done</button>
+            <button
+              className="del-btn"
+              onClick={() => {
+                onDelete(index)
+              }}
+            >
+              Done
+            </button>
           </li>
         ))}
       </ul>
@@ -16,3 +23,5 @@ const List = ({ text }) => {
 }
 
 export default List
+
+//Remember props are read only and i cannot modify them like i was doing with text.

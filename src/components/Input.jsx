@@ -13,6 +13,15 @@ const Input = () => {
     })
     setInput("")
   }
+
+  const handleDelete = (itemToDelete) => {
+    setTodoItem((prev) => {
+      return prev.filter((item, index) => {
+        return index !== itemToDelete
+      })
+    })
+    return
+  }
   return (
     <>
       <div className="form">
@@ -21,7 +30,7 @@ const Input = () => {
           <span>Add</span>
         </button>
       </div>
-      <List text={todoItem} />
+      <List text={todoItem} onDelete={handleDelete} />
     </>
   )
 }
